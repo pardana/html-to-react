@@ -1,10 +1,11 @@
 import React from 'react'
-import Btn from 'elements/Button'
+import Button from 'elements/Button'
+import Header from 'parts/Header'
 
 export default function Homepages() {
     return (
         <div>
-            <Btn>Sample</Btn>
+            <Header></Header>
         </div>
     )
 }
