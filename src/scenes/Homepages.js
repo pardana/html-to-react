@@ -14,6 +14,7 @@ import HeroImage from 'assets/images/hero-image.png'
 import FeatureTile01 from 'assets/images/feature-tile-icon-01.svg'
 import FeatureTile02 from 'assets/images/feature-tile-icon-02.svg'
 import FeatureTile03 from 'assets/images/feature-tile-icon-03.svg'
+import Footer from 'parts/Footer';
 
 export default function Homepages() {
     const features = [
@@ -173,6 +174,7 @@ export default function Homepages() {
                     </div>
                 </section>
             </main>
+            <Footer></Footer>
         </div>
     )
 }
