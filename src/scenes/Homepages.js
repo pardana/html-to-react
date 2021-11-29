@@ -3,11 +3,36 @@ import Fade from 'react-reveal/Fade';
 
 import Header from 'parts/Header'
 import Client from 'parts/Client'
+import Feature from 'parts/Feature'
 
 import Section from 'elements/Section'
 import HeroImage from 'assets/images/hero-image.png'
+import FeatureTile01 from 'assets/images/feature-tile-icon-01.svg'
+import FeatureTile02 from 'assets/images/feature-tile-icon-02.svg'
+import FeatureTile03 from 'assets/images/feature-tile-icon-03.svg'
 
 export default function Homepages() {
+    const features = [
+        {
+            imgSrc: FeatureTile01,
+            imgAlt: "Feature tile icon 01",
+            title: "Join the iAppTech ID",
+            description: "A pseudo-Latin text used in webdesign, layout, and printing in place of things to emphasise design."
+        },
+        {
+            imgSrc: FeatureTile02,
+            imgAlt: "Feature tile icon 02",
+            title: "Join the iAppTech ID",
+            description: "A pseudo-Latin text used in webdesign, layout, and printing in place of things to emphasise design."
+        },
+        {
+            imgSrc: FeatureTile03,
+            imgAlt: "Feature tile icon 03",
+            title: "Join the iAppTech ID",
+            description: "A pseudo-Latin text used in webdesign, layout, and printing in place of things to emphasise design."
+        }
+    ]
+
     return (
         <div className="body-wrap">
             <Header></Header>
@@ -43,7 +68,25 @@ export default function Homepages() {
 						</div>
 					</div>
                 </Section>
+                
                 <Client></Client>
+
+                <section className="features-tiles">
+                    <div className="container">
+                        <div className="features-tiles-inner section-inner">
+                            <div className="tiles-wrap">
+                                {
+                                    features.map(( feature, i) => 
+                                    <Feature 
+                                        key={i}
+                                        delayInMS={i = 500} 
+                                        data={feature}
+                                    ></Feature>) 
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </main>
         </div>
     )
