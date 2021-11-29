@@ -13,14 +13,18 @@ export default function Button(props) {
     if(props.isSmall){
         className.push("button-sm");
     }
+    if(props.isBlock){
+        className.push("button-block");
+    }
 
     return (
         <button className={className.join(" ")}>{props.children}</button>
     )
 }
 
-Button.propTypes = {
+Button.propTypes = {    
     isPrimary: propTypes.bool,
     isWebMobile: propTypes.bool,
+    isBlock: propTypes.bool,
     isSmall: propTypes.bool,
 }
